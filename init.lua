@@ -8,23 +8,23 @@
 	{"Jungle" , "jungle"},
 	{"Spruce" , "spruce"},
 	{"Wood" , "wood"},
-  {"Fir", "fir"},
-  {"Pine", "pine"},
-  {"Willow", "willow"},
-  {"Sequoia", "sequoia"},
+	{"Fir", "fir"},
+	{"Pine", "pine"},
+	{"Willow", "willow"},
+	{"Sequoia", "sequoia"},
 }
 
 for i in ipairs(door_list) do
 	local desc = door_list[i][1]
 	local img = door_list[i][2]
 
-doors.register_door("nice_doors:"..img, {
-	description = desc,
-	inventory_image = "nice_doors_"..img.."_inv.png",
-	groups = {choppy=2,cracky=2,door=1},
-	tiles = {{ name = "nice_doors_"..img..".png", backface_culling = false }},
-	protected = true,
-})
+	doors.register_door("nice_doors:"..img, {
+		description = desc,
+		inventory_image = "nice_doors_"..img.."_inv.png",
+		groups = {choppy=2,cracky=2,door=1},
+		tiles = {{ name = "nice_doors_"..img..".png", backface_culling = false }},
+		protected = true,
+	})
 end
 
 -- Crafts
@@ -71,129 +71,128 @@ if minetest.get_modpath("moretrees") then
 			{"moretrees:fir_planks", "moretrees:fir_planks", ""}
 		}
 	})
-minetest.register_craft({
-	output = "nice_doors:wood 2",
-	recipe = {
-		{"moretrees:apple_tree_planks", "moretrees:apple_tree_planks", ""},
-		{"moretrees:apple_tree_planks", "moretrees:apple_tree_planks", ""},
-		{"moretrees:apple_tree_planks", "moretrees:apple_tree_planks", ""}
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:spruce 2",
-	recipe = {
-		{"moretrees:spruce_planks", "moretrees:spruce_planks", ""},
-		{"moretrees:spruce_planks", "moretrees:spruce_planks", ""},
-		{"moretrees:spruce_planks", "moretrees:spruce_planks", ""}
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:sequoia 2",
-	recipe = {
-		{"moretrees:sequoia_planks", "moretrees:sequoia_planks", ""},
-		{"moretrees:sequoia_planks", "moretrees:sequoia_planks", ""},
-		{"moretrees:sequoia_planks", "moretrees:sequoia_planks", ""}
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:birch 2",
-	recipe = {
-		{"moretrees:birch_planks", "moretrees:birch_planks", ""},
-		{"moretrees:birch_planks", "moretrees:birch_planks", ""},
-		{"moretrees:birch_planks", "moretrees:birch_planks", ""}
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:beech 2",
-	recipe = {
-		{"moretrees:beech_planks", "moretrees:beech_planks", ""},
-		{"moretrees:beech_planks", "moretrees:beech_planks", ""},
-		{"moretrees:beech_planks", "moretrees:beech_planks", ""}
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:dark_oak 2",
-	recipe = {
-		{"moretrees:oak_planks", "moretrees:oak_planks", ""},
-		{"moretrees:oak_planks", "moretrees:oak_planks", ""},
-		{"moretrees:oak_planks", "moretrees:oak_planks", ""}
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:willow 2",
-	recipe = {
-		{"moretrees:willow_planks", "moretrees:willow_planks", ""},
-		{"moretrees:willow_planks", "moretrees:willow_planks", ""},
-		{"moretrees:willow_planks", "moretrees:willow_planks", ""}
-	}
-})
+	minetest.register_craft({
+		output = "nice_doors:wood 2",
+		recipe = {
+			{"moretrees:apple_tree_planks", "moretrees:apple_tree_planks", ""},
+			{"moretrees:apple_tree_planks", "moretrees:apple_tree_planks", ""},
+			{"moretrees:apple_tree_planks", "moretrees:apple_tree_planks", ""}
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:spruce 2",
+		recipe = {
+			{"moretrees:spruce_planks", "moretrees:spruce_planks", ""},
+			{"moretrees:spruce_planks", "moretrees:spruce_planks", ""},
+			{"moretrees:spruce_planks", "moretrees:spruce_planks", ""}
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:sequoia 2",
+		recipe = {
+			{"moretrees:sequoia_planks", "moretrees:sequoia_planks", ""},
+			{"moretrees:sequoia_planks", "moretrees:sequoia_planks", ""},
+			{"moretrees:sequoia_planks", "moretrees:sequoia_planks", ""}
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:birch 2",
+		recipe = {
+			{"moretrees:birch_planks", "moretrees:birch_planks", ""},
+			{"moretrees:birch_planks", "moretrees:birch_planks", ""},
+			{"moretrees:birch_planks", "moretrees:birch_planks", ""}
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:beech 2",
+		recipe = {
+			{"moretrees:beech_planks", "moretrees:beech_planks", ""},
+			{"moretrees:beech_planks", "moretrees:beech_planks", ""},
+			{"moretrees:beech_planks", "moretrees:beech_planks", ""}
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:dark_oak 2",
+		recipe = {
+			{"moretrees:oak_planks", "moretrees:oak_planks", ""},
+			{"moretrees:oak_planks", "moretrees:oak_planks", ""},
+			{"moretrees:oak_planks", "moretrees:oak_planks", ""}
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:willow 2",
+		recipe = {
+			{"moretrees:willow_planks", "moretrees:willow_planks", ""},
+			{"moretrees:willow_planks", "moretrees:willow_planks", ""},
+			{"moretrees:willow_planks", "moretrees:willow_planks", ""}
+		}
+	})
 
-if minetest.get_modpath("cblocks") then
-minetest.register_craft({
-	output = "nice_doors:fir 2",
-	recipe = {
-		{"cblocks:wood_orange", "cblocks:wood_orange", ""},
-		{"cblocks:wood_orange", "cblocks:wood_orange", ""},
-		{"cblocks:wood_orange", "cblocks:wood_orange", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:wood 2",
-	recipe = {
-		{"cblocks:wood_grey", "cblocks:wood_grey", ""},
-		{"cblocks:wood_grey", "cblocks:wood_grey", ""},
-		{"cblocks:wood_grey", "cblocks:wood_grey", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:spruce 2",
-	recipe = {
-		{"cblocks:wood_brown", "cblocks:wood_brown", ""},
-		{"cblocks:wood_brown", "cblocks:wood_brown", ""},
-		{"cblocks:wood_brown", "cblocks:wood_brown", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:dark_oak 2",
-	recipe = {
-		{"cblocks:wood_black", "cblocks:wood_black", ""},
-		{"cblocks:wood_black", "cblocks:wood_black", ""},
-		{"cblocks:wood_black", "cblocks:wood_black", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:beech 2",
-	recipe = {
-		{"cblocks:wood_red", "cblocks:wood_red", ""},
-		{"cblocks:wood_red", "cblocks:wood_red", ""},
-		{"cblocks:wood_red", "cblocks:wood_red", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:birch 2",
-	recipe = {
-		{"cblocks:wood_yellow", "cblocks:wood_yellow", ""},
-		{"cblocks:wood_yellow", "cblocks:wood_yellow", ""},
-		{"cblocks:wood_yellow", "cblocks:wood_yellow", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:sequoia 2",
-	recipe = {
-		{"cblocks:wood_dark_grey", "cblocks:wood_dark_grey", ""},
-		{"cblocks:wood_dark_grey", "cblocks:wood_dark_grey", ""},
-		{"cblocks:wood_dark_grey", "cblocks:wood_dark_grey", ""},
-	}
-})
-minetest.register_craft({
-	output = "nice_doors:willow 2",
-	recipe = {
-		{"cblocks:wood_green", "cblocks:wood_green", ""},
-		{"cblocks:wood_green", "cblocks:wood_green", ""},
-		{"cblocks:wood_green", "cblocks:wood_green", ""},
-	}
-})
-	end
+elseif minetest.get_modpath("cblocks") then
+	minetest.register_craft({
+		output = "nice_doors:fir 2",
+		recipe = {
+			{"cblocks:wood_orange", "cblocks:wood_orange", ""},
+			{"cblocks:wood_orange", "cblocks:wood_orange", ""},
+			{"cblocks:wood_orange", "cblocks:wood_orange", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:wood 2",
+		recipe = {
+			{"cblocks:wood_grey", "cblocks:wood_grey", ""},
+			{"cblocks:wood_grey", "cblocks:wood_grey", ""},
+			{"cblocks:wood_grey", "cblocks:wood_grey", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:spruce 2",
+		recipe = {
+			{"cblocks:wood_brown", "cblocks:wood_brown", ""},
+			{"cblocks:wood_brown", "cblocks:wood_brown", ""},
+			{"cblocks:wood_brown", "cblocks:wood_brown", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:dark_oak 2",
+		recipe = {
+			{"cblocks:wood_black", "cblocks:wood_black", ""},
+			{"cblocks:wood_black", "cblocks:wood_black", ""},
+			{"cblocks:wood_black", "cblocks:wood_black", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:beech 2",
+		recipe = {
+			{"cblocks:wood_red", "cblocks:wood_red", ""},
+			{"cblocks:wood_red", "cblocks:wood_red", ""},
+			{"cblocks:wood_red", "cblocks:wood_red", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:birch 2",
+		recipe = {
+			{"cblocks:wood_yellow", "cblocks:wood_yellow", ""},
+			{"cblocks:wood_yellow", "cblocks:wood_yellow", ""},
+			{"cblocks:wood_yellow", "cblocks:wood_yellow", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:sequoia 2",
+		recipe = {
+			{"cblocks:wood_dark_grey", "cblocks:wood_dark_grey", ""},
+			{"cblocks:wood_dark_grey", "cblocks:wood_dark_grey", ""},
+			{"cblocks:wood_dark_grey", "cblocks:wood_dark_grey", ""},
+		}
+	})
+	minetest.register_craft({
+		output = "nice_doors:willow 2",
+		recipe = {
+			{"cblocks:wood_green", "cblocks:wood_green", ""},
+			{"cblocks:wood_green", "cblocks:wood_green", ""},
+			{"cblocks:wood_green", "cblocks:wood_green", ""},
+		}
+	})
 end
 
 if minetest.get_modpath("technic") then
